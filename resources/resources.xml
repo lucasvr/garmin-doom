@@ -13,22 +13,24 @@
     </fonts>
 
     <bitmaps>
-      <bitmap id="DoomFaces" filename="bitmaps/doomfaces.png" dithering="floyd_steinberg">
-        <palette>
-          <color>FFFFFF</color>
-          <color>AAAAAA</color>
-          <color>555555</color>
-          <color>000000</color>
-          <color>FF0000</color>
-          <color>AA0000</color>
-          <color>FF5500</color>
-          <color>FF00FF</color>
-          <color>FFAA00</color>
-          <color>5500AA</color>
-          <color>00FF00</color>
-          <color>00AA00</color>
-          <color>00AAFF</color>
-          <color>0000FF</color>
+      <bitmap id="DoomFaces" filename="bitmaps/doomfaces.png" >
+        <palette disableTransparency="true">
+          <color>000100</color>
+          <color>3A2E16</color>
+          <color>5D050B</color>
+          <color>664726</color>
+          <color>6C6E69</color>
+          <color>8B8273</color>
+          <color>945F37</color>
+          <color>9A3533</color>
+          <color>BB0000</color>
+          <color>BB7749</color>
+          <color>BEA19E</color>
+          <color>CB6968</color>
+          <color>E19464</color>
+          <color>F8AD7A</color>
+          <color>FDFFFC</color>
+          <color>FFBF99</color>
         </palette>
       </bitmap>
     </bitmaps>
