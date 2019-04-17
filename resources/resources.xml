@@ -1,0 +1,35 @@
+<resources>
+    <strings>
+      <string id="AppName">DoomDataField</string>
+    </strings>
+
+    <drawables>
+      <bitmap id="LauncherIcon" filename="bitmaps/launcher_icon.png" />
+    </drawables>
+
+    <fonts>
+      <font id="DoomFont14" filename="fonts/doom_size14.fnt"/>
+      <font id="DoomFont20" filename="fonts/doom_size20.fnt" filter="0123456789-"/>
+    </fonts>
+
+    <bitmaps>
+      <bitmap id="DoomFaces" filename="bitmaps/doomfaces.png" dithering="floyd_steinberg">
+        <palette>
+          <color>FFFFFF</color>
+          <color>AAAAAA</color>
+          <color>555555</color>
+          <color>000000</color>
+          <color>FF0000</color>
+          <color>AA0000</color>
+          <color>FF5500</color>
+          <color>FF00FF</color>
+          <color>FFAA00</color>
+          <color>5500AA</color>
+          <color>00FF00</color>
+          <color>00AA00</color>
+          <color>00AAFF</color>
+          <color>0000FF</color>
+        </palette>
+      </bitmap>
+    </bitmaps>
+</resources>
