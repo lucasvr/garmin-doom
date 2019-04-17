@@ -2,7 +2,7 @@
 This is a data field for Garmin devices that's heavily inspired by the classic Doom game.
 You get some visual suffer score feedback and other data fields as usual.
 
-![](artwork/doom_datafield.gif)
+![](artwork/doom_datafield.png)
 
 ## Setup
 All you'll need to get started is edit the ```properties.mk``` file. Here's a description of the variables:
