@@ -1,37 +1,53 @@
 <resources>
-    <strings>
-      <string id="AppName">DoomDataField</string>
-    </strings>
+  <strings>
+    <string id="AppName">DoomDataField</string>
+    <string id="Speed">Speed</string>
+    <string id="HeartRate">HR</string>
+  </strings>
 
-    <drawables>
-      <bitmap id="LauncherIcon" filename="bitmaps/launcher_icon.png" />
-    </drawables>
+  <drawables>
+    <bitmap id="LauncherIcon" filename="bitmaps/launcher_icon.png" />
+  </drawables>
 
-    <fonts>
-      <font id="DoomFont14" filename="fonts/doom_size14.fnt"/>
-      <font id="DoomFont20" filename="fonts/doom_size20.fnt" filter="0123456789-"/>
-    </fonts>
+  <fonts>
+    <font id="DoomFont14" filename="fonts/doom_size14.fnt"/>
+    <font id="DoomFont20" filename="fonts/doom_size20.fnt" filter="0123456789-"/>
+  </fonts>
 
-    <bitmaps>
-      <bitmap id="DoomFaces" filename="bitmaps/doomfaces.png" dithering="none">
-        <palette disableTransparency="true">
-          <color>000100</color>
-          <color>3A2E16</color>
-          <color>5D050B</color>
-          <color>664726</color>
-          <color>6C6E69</color>
-          <color>8B8273</color>
-          <color>945F37</color>
-          <color>9A3533</color>
-          <color>BB0000</color>
-          <color>BB7749</color>
-          <color>BEA19E</color>
-          <color>CB6968</color>
-          <color>E19464</color>
-          <color>F8AD7A</color>
-          <color>FDFFFC</color>
-          <color>FFBF99</color>
-        </palette>
-      </bitmap>
-    </bitmaps>
+  <bitmaps>
+    <bitmap id="DoomFaces" filename="bitmaps/doomfaces.png" dithering="none">
+      <palette disableTransparency="true">
+        <color>000100</color>
+        <color>3A2E16</color>
+        <color>5D050B</color>
+        <color>664726</color>
+        <color>6C6E69</color>
+        <color>8B8273</color>
+        <color>945F37</color>
+        <color>9A3533</color>
+        <color>BB0000</color>
+        <color>BB7749</color>
+        <color>BEA19E</color>
+        <color>CB6968</color>
+        <color>E19464</color>
+        <color>F8AD7A</color>
+        <color>FDFFFC</color>
+        <color>FFBF99</color>
+      </palette>
+    </bitmap>
+  </bitmaps>
+
+  <drawable-list id="BgFill" foreground="Gfx.COLOR_BLACK">
+    <shape type="rectangle" x="0" y="0" width="fill" height="fill"/>
+  </drawable-list>
+
+  <layout id="MainLayout">
+    <drawable id="BgFill"/>
+
+    <label x="60"  y="243" text="@Strings.HeartRate" font="@Fonts.DoomFont14" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT"/>
+    <label x="134" y="243" text="@Strings.Speed"     font="@Fonts.DoomFont14" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_LEFT"/>
+    <label x="60"  y="203" text="---" id="HRData"    font="@Fonts.DoomFont20" color="Gfx.COLOR_RED" justification="Gfx.TEXT_JUSTIFY_RIGHT"/>
+    <label x="144" y="203" text="0"   id="SpeedData" font="@Fonts.DoomFont20" color="Gfx.COLOR_RED" justification="Gfx.TEXT_JUSTIFY_LEFT"/>
+  </layout>
+
 </resources>
