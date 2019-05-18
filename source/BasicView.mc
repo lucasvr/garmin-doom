@@ -26,7 +26,6 @@ class BasicView extends Ui.DataField {
     var current_altitude = null;
 
     // User profile
-    var this_sport;
     var hr_zones;
 
     // Sprite grid we care about is 6x5. We just ignore the elements
@@ -71,11 +70,14 @@ class BasicView extends Ui.DataField {
         canvas_width = dc.getWidth();
         canvas_height = dc.getHeight();
 
-        this_sport = UserProfile.getCurrentSport();
+        var this_sport = UserProfile.getCurrentSport();
         if (this_sport == null) {
             this_sport = HR_ZONE_SPORT_GENERIC;
         }
         hr_zones = UserProfile.getHeartRateZones(this_sport);
+        if (hr_zones == null) {
+            hr_zones = [120, 140, 160, 180, 200];
+        }
 
         setLayout(Rez.Layouts.MainLayout(dc));
         return true;
