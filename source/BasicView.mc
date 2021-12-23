@@ -88,7 +88,7 @@ class BasicView extends Ui.DataField {
             // Given in beats per minute
             current_hr = info.currentHeartRate;
         }
-        if (info has :currentSpeed) {
+        if (info has :currentSpeed and info.currentSpeed != null) {
             // Convert from m/s to km/h
             current_speed = info.currentSpeed * 3.6;
         }
