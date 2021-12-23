@@ -62,10 +62,15 @@ class BasicView extends Ui.DataField {
     //! Load your resources here
     function onLayout(dc) {
         // Bitmap and fonts
-        bitmap_faces = Ui.loadResource(Rez.Drawables.DoomFaces);
-        doom_font14 = Ui.loadResource(Rez.Fonts.DoomFont14);
-        doom_font20 = Ui.loadResource(Rez.Fonts.DoomFont20);
-
+        if (bitmap_faces == null) {
+            bitmap_faces = Ui.loadResource(Rez.Drawables.DoomFaces);
+        }
+        if (doom_font14 == null) {
+            doom_font14 = Ui.loadResource(Rez.Fonts.DoomFont14);
+        }
+        if (doom_font20 == null) {
+            doom_font20 = Ui.loadResource(Rez.Fonts.DoomFont20);
+        }
         // Canvas width, height
         canvas_width = dc.getWidth();
         canvas_height = dc.getHeight();
@@ -88,7 +93,7 @@ class BasicView extends Ui.DataField {
             // Given in beats per minute
             current_hr = info.currentHeartRate;
         }
-        if (info has :currentSpeed) {
+        if (info has :currentSpeed and info.currentSpeed != null) {
             // Convert from m/s to km/h
             current_speed = info.currentSpeed * 3.6;
         }
